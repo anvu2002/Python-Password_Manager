@@ -44,4 +44,13 @@ python3 -m Password_Manager add -s facebook -u facebook.com -l user123
 
 ```
 ## Background
+[+] MASTER PASSWORD: the initial text input enterer by the users, hashed and saved in pm.secretes<br>
+[+] SALT – Secrete Value: an IV value used in HMAC method to protect Master Password Hash, saved in a pm.secretes<br>
+[+] MASTER KEY: encryption key AES<br>
+AES-256 will be used to provide encryption for specified fields. Since the cipher requires a specific encryption key        length such as 256 bits long, yet the inputs by the users could be vary. In this case, PBKDF2 is used as a key stretching  technique<br>
+		PBKDF2 = HMAC-SHA256 (Master Password + SALT) --> hashing function = valid key for AES-256<br>
+Encrypted fields: email, username, sites’ passwords<br>
+Plain fields: sitename, URLs<br>
+[+] Process:
+
 
