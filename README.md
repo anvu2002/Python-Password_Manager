@@ -2,6 +2,12 @@
 ## Motivation
 Portfolio building - Site passwords management using python modules to encrypt password and manage data through MariaDB
 
+## Features
+This CLI program allows users to manage passwords and other information corresponding to a site. They only need to provide a single Master Password that will give access to all stored information, with the site passwords are hidden and encrypted with AES 256.<br>
+The information is saved in MariaDB database.<br>
+The sites’ passwords are {hidden} when the entries are displayed in the CLI, and they could be copied to a clipboard through specified options.<br>
+The sites’ passwords can be auto-generated randomly to further the secure for its users. 
+
 ### Requirements
 ```
 pip install backports.pbkdf2
@@ -37,3 +43,5 @@ python config
 python3 -m Password_Manager add -s facebook -u facebook.com -l user123
 
 ```
+## Background
+
