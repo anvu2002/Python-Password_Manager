@@ -57,9 +57,9 @@ With
 ```
 -c: decrypt and copy site's password to clipboard
 ```
-oMasterPassword is asked, then validates by hashing that user-inputted value and compare against the stored hash. 
-oMasterKey is then created (PBKDF of MasterPassword + SALT)
-oDecrypt Site’s passwords with MasterKey and copy to clipboard.
+MasterPassword is asked, then validates by hashing that user-inputted value and compare against the stored hash<br>
+MasterKey is then created (PBKDF of MasterPassword + SALT)<br>
+Decrypt Site’s passwords with MasterKey and copy to clipboard<br>
 
 
 
