@@ -52,5 +52,14 @@ AES-256 will be used to provide encryption for specified fields. Since the ciphe
 Encrypted fields: email, username, sites’ passwords<br>
 Plain fields: sitename, URLs<br>
 [+] Process:
+MasterPassword is inputted as plaintext then hashed by the program. It compares that hashed value against the stored hash in the database; if matches, the user is authenticated. MasterKey is then created = PBKDF2 (MasterPassword_PlainText + SALT). The user starts inputting for fields such as site names, URLs, username, email, and password; with the last 3 fields are encrypted with MaterKey<br>.
+With 
+```
+-c: decrypt and copy site's password to clipboard
+```
+oMasterPassword is asked, then validates by hashing that user-inputted value and compare against the stored hash. 
+oMasterKey is then created (PBKDF of MasterPassword + SALT)
+oDecrypt Site’s passwords with MasterKey and copy to clipboard.
+
 
 
