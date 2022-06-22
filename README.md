@@ -1,6 +1,6 @@
 # Python-Password_Manager
 ## Motivation
-Portfolio building - AES encryption and key management
+Portfolio building - Site passwords management using python modules to encrypt password and manage data through MariaDB
 
 ## Usages
 ```
