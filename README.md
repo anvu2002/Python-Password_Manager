@@ -2,6 +2,13 @@
 ## Motivation
 Portfolio building - Site passwords management using python modules to encrypt password and manage data through MariaDB
 
+##Requirements
+```
+pip install backports.pbkdf2
+service mysql start
+pip install rich
+```
+
 ## Usages
 ```
 Usage:
